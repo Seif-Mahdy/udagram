@@ -8,7 +8,7 @@
     "start": "ng serve",
     "build": "NODE_OPTIONS=--openssl-legacy-provider ng build",
     "deploy": "npm install -f && npm run build && chmod +x bin/deploy.sh && bin/deploy.sh",
-    "test": "ng test --watch=false",
+    "test": "NODE_OPTIONS=\"--max_old_space_size=4096 --openssl-legacy-provider\" ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
